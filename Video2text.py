@@ -37,8 +37,11 @@ def play():
         while(clock + frame_time * (same_count + 1) - 0.0027 > t):
             t = time.time()
         if(first):
-            os.system(settings.audio_path)
-            first = False
+            try:
+                os.system(settings.audio_path)
+                first = False
+            except:
+                first = False
         print(s)
         clock = time.time()
 
