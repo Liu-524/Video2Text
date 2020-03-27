@@ -5,7 +5,7 @@ import settings
 import time
 from numba import jit
 @jit
-def play():
+def play(audio):
     dic = settings.char_coll
     dic.reverse()
     video = cv2.VideoCapture(settings.video_path)
@@ -36,17 +36,20 @@ def play():
         t = time.time()
         while(clock + frame_time * (same_count + 1) - settings.offset > t):
             t = time.time()
-        if(first):
-            try:
-                os.system(settings.audio_path)
-                first = False
-            except:
-                first = False
+        if(first & audio):
+            os.system(settings.audio_path)
+            first = False      
         print(s)
         clock = time.time()
 
 if __name__ == "__main__":
-    play()
+    audio = True
+    try:
+        f = open(settings.audio_path)
+        f.close()
+    except:
+        audio = False
+    play(audio)
             
 
 

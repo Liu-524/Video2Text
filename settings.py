@@ -1,6 +1,6 @@
 
 #the path od the video
-video_path = 'D:/[WPF]JJDown/Download/devilman.mp4'
+video_path = 'D:/[WPF]JJDown/Download/barayori.mp4'
 
 #char_collection
 char_coll = ['M','N','@','*','+','-',' ']
@@ -12,7 +12,7 @@ out_width = 120
 out_height = 30
 
 #audio path
-audio_path = 'D:/[WPF]JJDown/Download/devil.aac'
+audio_path = 'D:/[WPF]JJDown/Download/devil.aacxxxx'
 
 #offset for slow print in python in sec
 offset = 0.0027
