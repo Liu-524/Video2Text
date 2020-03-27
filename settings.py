@@ -13,3 +13,6 @@ out_height = 30
 
 #audio path
 audio_path = 'D:/[WPF]JJDown/Download/devil.aac'
+
+#offset for slow print in python in sec
+offset = 0.0027

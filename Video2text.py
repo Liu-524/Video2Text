@@ -34,7 +34,7 @@ def play():
                 index = math.floor(sg_frame[i][j] * len(dic) / 256)
                 s += dic[index]
         t = time.time()
-        while(clock + frame_time * (same_count + 1) - 0.0027 > t):
+        while(clock + frame_time * (same_count + 1) - settings.offset > t):
             t = time.time()
         if(first):
             try:
